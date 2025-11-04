@@ -1,0 +1,18 @@
+[00:00:03.012] Server  LOG      ✓ Ready in 2.8s
+[00:01:08.264] Server  LOG      ✓ Compiled in 99ms
+[00:03:56.361] Server  LOG      ✓ Compiled in 612ms
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
+[00:04:59.730] Server  LOG        Reload env: .env.local
+[00:04:59.922] Server  LOG      ✓ Compiled in 201ms
+[00:05:17.018] Server  LOG        Reload env: .env
