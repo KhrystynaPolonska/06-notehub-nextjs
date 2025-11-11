@@ -1,10 +1,23 @@
-
+import { HydrationBoundary, dehydrate } from '@tanstack/react-query';
+import { getQueryClient } from '@/lib/queryClient';
 import { fetchNotes } from '@/lib/api';
+import { notesKeys } from '@/lib/queryKeys';
 import NotesClient from './Notes.client';
-import { NoteResponse } from '@/types/note';
 
 export default async function NotesPage() {
-  const initialData: NoteResponse = await fetchNotes(1);
-    return <NotesClient initialData={initialData} />;
-  }
+  const queryClient = getQueryClient();
+
+  await queryClient.prefetchQuery({
+    queryKey: notesKeys.list(1),
+    queryFn: () => fetchNotes(1),
+  });
+
+  const dehydratedState = dehydrate(queryClient);
+
+  return (
+    <HydrationBoundary state={dehydratedState}>
+      <NotesClient />
+    </HydrationBoundary>
+  );
+}
 

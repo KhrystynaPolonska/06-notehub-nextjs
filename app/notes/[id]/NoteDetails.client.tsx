@@ -1,24 +1,43 @@
-"use client";
+'use client';
 
-import { useQuery } from "@tanstack/react-query";
-import { fetchNoteById } from "@/lib/api";
-import Loading from "@/app/loading";
-import ErrorComponent from "@/app/notes/[id]/error";
-import NoteDetails from "@/components/NoteDetails/NoteDetails";
+import { useQuery } from '@tanstack/react-query';
+import { fetchNoteById } from '@/lib/api';
+import type { Note } from '@/types/note';
+import css from '@/components/NoteDetails/NoteDetails.module.css';
 
-interface NoteDetailsClientProps {
-  id: string;
-}
+const NoteDetailsClient = ({ noteId }: { noteId: string }) => {
+  const isValidId = !!noteId;
 
-export default function NoteDetailsClient({ id }: NoteDetailsClientProps) {
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["note", id],
-    queryFn: () => fetchNoteById(id),
+  const {
+    data: note,
+    isLoading,
+    isError,
+  } = useQuery<Note, Error>({
+    queryKey: ['note', noteId],
+    queryFn: () => fetchNoteById(noteId),
+    refetchOnMount: false,
+    enabled: isValidId,
   });
 
-  if (isLoading) return <Loading />;
-  if (error || !data)
-    return <ErrorComponent error={error!} reset={() => window.location.reload()} />;
+  if (!isValidId) {
+    return <p>Invalid note ID</p>;
+  }
 
-  return <NoteDetails note={data} />;
-}
+  if (isLoading) return <p>Loading note details...</p>;
+  if (isError || !note) return <p>Something went wrong.</p>;
+  if (!note) return <p>Note not found</p>;
+
+  return (
+    <div className={css.container}>
+      <div className={css.item}>
+        <div className={css.header}>
+          <h2>{note.title}</h2>
+        </div>
+        <p className={css.content}>{note.content}</p>
+        <p className={css.date}>{note.createdAt}</p>
+      </div>
+    </div>
+  );
+};
+
+export default NoteDetailsClient;

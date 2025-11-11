@@ -1,17 +1,11 @@
-"use client";
+'use client';
 
 interface ErrorProps {
-  error: Error;
-  reset: () => void;
+  error: Error & { digest?: string };
 }
 
-export default function ErrorComponent({ error, reset }: ErrorProps) {
-  return (
-    <div>
-     <p>Something went wrong.</p>
-     <button 
-     className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-     onClick={reset}>Try again</button>
-     </div>
-    );
+function Error({ error }: ErrorProps) {
+  return <p>Could not fetch note details. {error.message}</p>;
 }
+
+export default Error;

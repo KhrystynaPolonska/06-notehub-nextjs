@@ -7,17 +7,14 @@ export interface Note {
     updatedAt: string;
 }
 
-export interface NoteResponse {
-    notes: Note[];
-    totalPages: number;
-    page: number;
-}
 export interface NoteCreate {
     title: string;
     content: string;
     tag: "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
-  }
+}
+  export interface FetchNotesResponse {
+  notes: Note[];
+  totalPages: number;
+  currentPage: number;
+}
 
-  export interface NotesClientProps {
-    initialData: NoteResponse;
-  }

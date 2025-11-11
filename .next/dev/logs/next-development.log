@@ -1,18 +1,584 @@
-[00:00:03.012] Server  LOG      ✓ Ready in 2.8s
-[00:01:08.264] Server  LOG      ✓ Compiled in 99ms
-[00:03:56.361] Server  LOG      ✓ Compiled in 612ms
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:03:58.411] Browser ERROR   Failed to fetch RSC payload for http://localhost:3001/. Falling back to browser navigation. {}
-[00:04:59.730] Server  LOG        Reload env: .env.local
-[00:04:59.922] Server  LOG      ✓ Compiled in 201ms
-[00:05:17.018] Server  LOG        Reload env: .env
+[00:00:00.935] Server  LOG      ✓ Ready in 703ms
+[00:00:05.507] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:05.844] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.116] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           style={{overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[00:00:06.116] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.116] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.161] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.308] Browser ERROR   uncaughtError: Error: ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:06.497] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.930] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:06.930] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:49.031] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './';
+     | ^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:49.035] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './';
+     | ^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:49.036] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './';
+     | ^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:49.040] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './';
+     | ^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:01:49.931] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './';
+     | ^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:01:50.205] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './';
+     | ^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:13.583] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:13.585] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:13.586] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:13.586] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:13.931] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:14.820] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:00.372] Server  ERROR    ⨯ ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:00.712] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:00.712] Browser ERROR   uncaughtError: Error: ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:00.712] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:00.929] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:00.929] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:00.929] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:37.751] Server  LOG      ✓ Compiled in 186ms
+[00:03:41.224] Server  LOG      ✓ Compiled in 28ms
+[00:03:45.321] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:05:00.794] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:00.794] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:05:00.794] Browser ERROR   ./app/notes/Notes.client.tsx:13:1
+Module not found: Can't resolve './Notes.client.module.css'
+  11 | import { fetchNotes } from '@/lib/api';
+  12 | import type { FetchNotesResponse } from '@/types/note';
+> 13 | import css from './Notes.client.module.css';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  14 |
+  15 | interface Props {
+  16 |   initialSearch?: string;
+
+Import trace:
+  Server Component:
+    ./app/notes/Notes.client.tsx
+    ./app/notes/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
