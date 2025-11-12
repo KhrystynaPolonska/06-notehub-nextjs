@@ -582,3 +582,6 @@ Import trace:
     ./app/notes/page.tsx
 
 https://nextjs.org/docs/messages/module-not-found
+[21:47:24.324] Server  LOG      ✓ Compiled in 422ms
+[21:59:26.920] Server  LOG      ✓ Compiled in 145ms
+[22:00:45.562] Server  LOG      ✓ Compiled in 15ms

@@ -11,7 +11,7 @@ interface NoteFormProps {
   onSubmit: () => void;
 }
 
-const tagOptions = ["Todo", "Idea", "Important"];
+const tagOptions = ["Todo", "Work", "Personal", "Meeting", "Shopping"];
 
 export default function NoteForm({ onSubmit }: NoteFormProps) {
   const queryClient = useQueryClient();
@@ -29,9 +29,17 @@ export default function NoteForm({ onSubmit }: NoteFormProps) {
   });
 
   const validationSchema = Yup.object({
-    title: Yup.string().required("Title is required"),
-    content: Yup.string().required("Content is required"),
-    tag: Yup.string().oneOf(tagOptions, "Invalid tag").required(),
+    title: Yup.string()
+      .min(3, "Title must be at least 3 characters")
+      .max(50, "Title must be at most 50 characters")
+      .required("Title is required"),
+
+    content: Yup.string()
+      .max(500, "Content must be at most 500 characters"),
+
+    tag: Yup.string()
+      .oneOf(tagOptions, "Invalid tag")
+      .required("Tag is required"),
   });
 
   return (
@@ -66,7 +74,7 @@ export default function NoteForm({ onSubmit }: NoteFormProps) {
             <Field
               as="textarea"
               name="content"
-              placeholder="Content"
+              placeholder="Content (optional)"
               className={css.textarea}
               disabled={isPending}
             />

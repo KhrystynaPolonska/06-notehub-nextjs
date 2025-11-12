@@ -9,7 +9,6 @@ import Pagination from '@/components/Pagination/Pagination';
 import NoteForm from '@/components/NoteForm/NoteForm';
 import Modal from '@/components/Modal/Modal';
 import { fetchNotes } from '@/lib/api';
-import type { FetchNotesResponse } from '@/types/note';
 import css from './Notes.client.module.css';
 
 interface Props {
